@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+<?php 
+session_start();
+
+	include("connection.php");
+	include("functions.php");
+
+	//$user_data = check_login($con);
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -77,14 +85,14 @@
                    <div class="text">
                       Login Form
                    </div>
-                   <form action="#" class="loginpage">
+                   <form action="login.php" method="post" class="loginpage">
                       <div class="data">
-                         <label>Email </label>
-                         <input type="text" required>
+                         <label>Username</label>
+                         <input type="text" name="user_name" id="user_name" required>
                       </div>
                       <div class="data">
                          <label>Password</label>
-                         <input type="password" required>
+                         <input type="password" name="password" id="password" required>
                       </div>
                       <div class="forgot-pass">
                          <a href="#">Forgot Password?</a>
@@ -94,14 +102,14 @@
                          <button type="submit">Login</button>
                       </div>
                       <div class="signup-link">
-                         Not a member? <a href="signup.html">Signup now</a>
+                         Not a member? <a href="signup.php">Signup now</a>
                       </div>
                    </form>          
            </div>
                 </div>
            
             <div class="center2">
-                <a href="signup.html">SIGNUP</a></ul>
+                <a href="signup.php">SIGNUP</a></ul>
         </div>
         
         </div>
@@ -176,10 +184,10 @@
     <div class="col3">
       <h5>Overview</h5>
       <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="PROJECT.HTML" class="nav-link p-0 text-muted">Home</a></li>
-        <li class="nav-item mb-2"><a href="signup.html" class="nav-link p-0 text-muted">SignUp</a></li>
+        <li class="nav-item mb-2"><a href="project.php" class="nav-link p-0 text-muted">Home</a></li>
+        <li class="nav-item mb-2"><a href="signup.php" class="nav-link p-0 text-muted">SignUp</a></li>
         <li class="nav-item mb-2"><a href= "Faqs.html">FAQs</a></li>
-        <li class="nav-item mb-2"><a href= "Login.html">Explore</a></li>
+        <li class="nav-item mb-2"><a href= "login.php">Explore</a></li>
        
       </ul>
     </div>
