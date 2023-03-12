@@ -10,7 +10,9 @@
 </head>
 <body>
     <div class="bg-img">
-    <form action="code.php" method="post" class="container">
+
+
+    <form action="code.php" method="post" enctype="multipart/form-data" class="container">
      
      
         <h1>ADD DETAILS</h1>
@@ -20,7 +22,10 @@
       <input type="text" placeholder="Enter Email" name="email" id="email" required>
       <label for="phonenumber"><b>Phone Number</b></label>
       <input type="text" placeholder="Enter PhoneNumber" id="phonenumber" name="phonenumber" required>
-  
+      <label for="text"><b>Breed</b></label>
+      <input type="text" placeholder="Enter your pet breed" name="breed" id="breed" required>
+      <label for="text"><b>Category</b></label>
+      <input type="text" placeholder="Enter your pet's category" name="category" id="category" required>
       
       
       <label for="age"><b>Pet Age</b></label>
@@ -32,10 +37,10 @@
       <label for="text"><b>Trained</b></label>
       <input type="text" placeholder="YES OR NO" name="tra" id="tra" required>
       
-      <label for="psw"><b>Picture</b></label>
+      <label for=""><b>Picture</b></label>
   
-        <input type="file" id="dbimage" name="dbimage">
-        <input type="submit">
+        <input type="file" id="dbimage" accept="image/" name="dbimage">
+        
         <br>
   
       <button type="submit" name="addsubmit" class="btn">Submit</button>
